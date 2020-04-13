@@ -6,14 +6,15 @@
 
 <script>
 export default {
-    name:'Backtop'
+  name: "Backtop"
 };
 </script>
 
 <style scoped>
 .back-top {
-    position: fixed;
-    right: 8px;
-    bottom: 55px;
+  position: fixed;
+  right: 8px;
+  bottom: 55px;
+  z-index: 10000;
 }
 </style>

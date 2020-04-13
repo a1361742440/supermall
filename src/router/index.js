@@ -6,7 +6,7 @@ const Home = () => import('../views/home/Home')
 const Category = () => import('../views/category/Category')
 const Cart = () => import('../views/cart/Cart')
 const Profile = () => import('../views/profile/Profile')
-
+const detail =() => import('../views/detail/detail')
 
 const routes = [
     {
@@ -29,6 +29,10 @@ const routes = [
         path: '/category',
         component: Category
     },
+    {
+        path:'/detail/:iid',
+        component:detail
+    }
 ]
 
 export default new Router({

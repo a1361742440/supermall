@@ -36,6 +36,8 @@ export default {
     this.scroll.on("scroll", position => {
       //   console.log(position);
       this.$emit("scroll", position);
+      //给商品详情页面发送位置
+      this.$emit("contentScroll",position);
     });
     //监听上拉事件
     this.scroll.on("pullingUp", () => {
@@ -44,13 +46,13 @@ export default {
   },
   methods: {
     scrollTo(x, y, time = 300) {
-      this.scroll.scrollTo(x, y, time);
+      this.scroll && this.scroll.scrollTo(x, y, time);
     },
     finishPullUp(){
-        this.scroll.finishPullUp()
+        this.scroll&& this.scroll.finishPullUp()
     },
     refresh(){
-        this.scroll.refresh()
+        this.scroll && this.scroll.refresh()
     }
   }
 };
